@@ -6,16 +6,19 @@
 C_SRCS += \
 ../src/test/main.c \
 ../src/test/main_databinder.c \
+../src/test/main_commandlineinterface.c \
 ../src/test/main_example.c 
 
 OBJS += \
 ./src/test/main.o \
 ./src/test/main_databinder.o \
+./src/test/main_commandlineinterface.o \
 ./src/test/main_example.o 
 
 C_DEPS += \
 ./src/test/main.d \
 ./src/test/main_databinder.d \
+./src/test/main_commandlineinterface.d \
 ./src/test/main_example.d 
 
 
@@ -23,7 +26,7 @@ C_DEPS += \
 src/test/%.o: ../src/test/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"../src/codec" -I"../src/din" -I"../src/iso1" -I"../src/iso2" -I"../src/xmldsig" -I"../src/appHandshake" -I"../src/transport" -I"../src/test" -O0 -g3 -Wall -c -fmessage-length=0 -ansi -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	gcc -I"../src/codec" -I"../src/din" -I"../src/iso1" -I"../src/iso2" -I"../src/xmldsig" -I"../src/appHandshake" -I"../src/transport" -I"../src/test" -O0 -g3 -Wall -c -fmessage-length=0  -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
