@@ -44,6 +44,10 @@ or
 	"debug": ""
 	}
 ```
+# How to compile
+- Go either to Debug/ or Release/ folder and run `make all`
+- source code is at src/ at the root
+- Debug/ and Release/ only have make instructions
 
 # Known limitations / ToDos
 - Decoder and encoder for DIN: Some message details are still missing.
