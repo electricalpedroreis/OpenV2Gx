@@ -237,7 +237,7 @@ int encodeUnsignedIntegerBig(bitstream_t* stream, size_t size, uint8_t* data, si
 	int lenM1 = len - 1;
 	const int MAX_BIGINT_ARRAY = 25;
 	uint8_t lastEncode = 0;
-	uint8_t bytesToShift[MAX_BIGINT_ARRAY]; // MAXIMUM
+	uint8_t bytesToShift[MAX_BIGINT_ARRAY]; /* MAXIMUM */
 	size_t bitsToEncode = len * 8;
 
 	if(MAX_BIGINT_ARRAY <= len) {
